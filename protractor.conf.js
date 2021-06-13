@@ -20,6 +20,7 @@ exports.config = {
     print: function() {}
   },
   onPrepare() {
+    browser.manage().timeouts().implicitlyWait(5000);
     require('ts-node').register({
       project: 'e2e/tsconfig.e2e.json'
     });
